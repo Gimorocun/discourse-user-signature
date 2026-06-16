@@ -1,6 +1,6 @@
 import Component from "@glimmer/component";
 import { apiInitializer } from "discourse/lib/api";
-import UserSignaturePoster from "../components/user-signature-poster";
+import UserSignature from "../components/user-signature";
 import { getSignatureValue, signatureFieldKey } from "../lib/signature-field";
 
 export default apiInitializer((api) => {
@@ -14,7 +14,7 @@ export default apiInitializer((api) => {
     }
 
     <template>
-      <UserSignaturePoster @post={{@post}} />
+      <UserSignature @user={{@post.user}} />
     </template>
   }
 
