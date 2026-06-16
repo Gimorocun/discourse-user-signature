@@ -1,5 +1,5 @@
 signature_user_field_id:
-  default: "1"
+  default: ""
   type: string
   description:
     en: "User field ID for the signature. Find it in Admin > Customize > User fields (e.g. 1 for user_field_1)."
