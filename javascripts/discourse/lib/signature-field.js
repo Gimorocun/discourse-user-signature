@@ -13,7 +13,7 @@ export function signatureFieldKey() {
 export function getSignatureValue(user) {
   const fieldKey = signatureFieldKey();
 
-  if (!fieldKey || !user?.custom_fields) {
+  if (!fieldKey || !user) {
     return null;
   }
 
