@@ -1,0 +1,23 @@
+signature_user_field_id:
+  default: "1"
+  type: string
+  description:
+    en: "User field ID for the signature. Find it in Admin > Customize > User fields (e.g. 1 for user_field_1)."
+    zh_CN: "个性签名对应的用户字段 ID。在「管理 > 自定义 > 用户字段」中查看（例如 1 对应 user_field_1）。"
+
+signature_display:
+  default: block
+  type: enum
+  choices:
+    - inline
+    - block
+  description:
+    en: "How the signature is displayed relative to the poster name."
+    zh_CN: "个性签名相对于用户名的显示方式。"
+
+show_edit_link:
+  default: true
+  type: bool
+  description:
+    en: "Show an edit link on the current user's own posts."
+    zh_CN: "在当前用户自己的帖子下显示编辑链接。"

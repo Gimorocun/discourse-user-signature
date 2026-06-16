@@ -1,0 +1,37 @@
+.topic-meta-data .names {
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.user-signature {
+  font-size: 0.9em;
+  color: var(--primary-high-or-secondary-low);
+  flex-shrink: 0;
+}
+
+.user-signature-inline {
+  display: inline-block;
+  margin-left: 8px;
+  order: 5;
+}
+
+.user-signature-block {
+  flex-basis: 100%;
+  margin-top: 4px;
+  order: 20;
+}
+
+.user-signature-edit {
+  margin-left: 6px;
+  color: var(--primary-medium);
+  font-size: 0.85em;
+
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.user-signature-empty {
+  font-style: italic;
+  opacity: 0.8;
+}

@@ -1,0 +1,6 @@
+en:
+  theme_metadata:
+    description: "Display user signatures from a configurable user field under the poster name."
+  user_signature:
+    edit: "Edit signature"
+    empty: "Set your signature"

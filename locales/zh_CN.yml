@@ -1,0 +1,6 @@
+zh_CN:
+  theme_metadata:
+    description: "在帖子用户名下方显示可配置的用户字段个性签名。"
+  user_signature:
+    edit: "编辑签名"
+    empty: "设置个性签名"
