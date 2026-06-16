@@ -34,22 +34,26 @@ export default class UserSignaturePoster extends Component {
   }
 
   <template>
-    {{#if this.signature}}
-      <div
-        class="user-signature user-signature-{{this.displayType}} field-{{this.fieldKey}}"
-      >
+    <div
+      class="user-signature user-signature-{{this.displayType}} field-{{this.fieldKey}}"
+    >
+      {{#if this.signature}}
         <span class="user-signature-text">{{this.signature}}</span>
+      {{else if this.isOwnPost}}
+        <span class="user-signature-text user-signature-empty">
+          {{i18n (themePrefix "user_signature.empty")}}
+        </span>
+      {{/if}}
 
-        {{#if this.showEditLink}}
-          <a
-            href={{this.editProfileUrl}}
-            class="user-signature-edit"
-            title={{i18n (themePrefix "user_signature.edit")}}
-          >
-            {{dIcon "pencil"}}
-          </a>
-        {{/if}}
-      </div>
-    {{/if}}
+      {{#if this.showEditLink}}
+        <a
+          href={{this.editProfileUrl}}
+          class="user-signature-edit"
+          title={{i18n (themePrefix "user_signature.edit")}}
+        >
+          {{dIcon "pencil"}}
+        </a>
+      {{/if}}
+    </div>
   </template>
 }
