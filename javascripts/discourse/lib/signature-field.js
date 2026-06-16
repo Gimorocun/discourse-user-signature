@@ -1,5 +1,3 @@
-import { get } from "@ember/object";
-
 export function signatureFieldKey() {
   const id = String(settings.signature_user_field_id || "").trim();
 
@@ -17,6 +15,6 @@ export function getSignatureValue(user) {
     return null;
   }
 
-  const value = get(user.custom_fields, fieldKey);
+  const value = user.custom_fields?.[fieldKey];
   return value ? String(value).trim() : null;
 }

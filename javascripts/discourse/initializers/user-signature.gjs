@@ -5,17 +5,12 @@ import { getSignatureValue, signatureFieldKey } from "../lib/signature-field";
 
 export default apiInitializer((api) => {
   class UserSignatureOutlet extends Component {
-    static shouldRender(args, _context, owner) {
+    static shouldRender(args) {
       if (!signatureFieldKey()) {
         return false;
       }
 
-      if (getSignatureValue(args.post?.user)) {
-        return true;
-      }
-
-      const currentUser = owner.lookup("service:current-user");
-      return currentUser?.id === args.post?.user_id;
+      return !!getSignatureValue(args.post?.user);
     }
 
     <template>
