@@ -11,9 +11,7 @@ export function signatureFieldKey() {
 }
 
 export function getSignatureValue(user) {
-  console.log(user)
   const fieldKey = signatureFieldKey();
-  console.log(fieldKey)
 
   if (!fieldKey || !user) {
     return null;
